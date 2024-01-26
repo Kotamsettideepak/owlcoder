@@ -25,15 +25,9 @@ class GfG
 
 class Solution
 {
-    public int gcd(int n , int m) 
+    public int gcd(int a , int b) 
     { 
-            while (n != m) {
-            if (n > m) {
-                n = n - m;
-            } else {
-                m = m - n;
-            }
-            }
-        return n;
+        if(a==0)return b;
+        return gcd(b%a,a);
     } 
 }
