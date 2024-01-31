@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
 
-class CustomComparator implements Comparator<Integer> {
+class CustomComparator implements Comparator<Integer> {    // we hould take it as public
     @Override
     public int compare(Integer num1, Integer num2) {
         // Custom comparison logic
@@ -15,7 +15,7 @@ class CustomComparator implements Comparator<Integer> {
     }
 }
 
-public class CustomComparatorExample {
+public class CustomComparatorExample { 
     public static void main(String[] args) {
         List<Integer> numbers = new ArrayList<>();
         numbers.add(5);
