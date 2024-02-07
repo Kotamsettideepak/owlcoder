@@ -10,6 +10,7 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        PrintWriter out=new PrintWriter(System.out);
         int tc = Integer.parseInt(br.readLine().trim());
         while (tc-- > 0) {
             String[] inputLine;
@@ -21,8 +22,9 @@ public class Main {
             }
 
             int ans = new Solution().findMaxSum(arr, n);
-            System.out.println(ans);
+            out.println(ans);
         }
+        out.close();
     }
 }
 // } Driver Code Ends
@@ -31,7 +33,7 @@ public class Main {
 //User function Template for Java
 
 class Solution {
-    public int dp[];
+     public int dp[];
 
     public int moon(int arr[], int i, int n) {
         if (i >= n) {
@@ -48,7 +50,7 @@ class Solution {
 
     int findMaxSum(int arr[], int n) {
         dp = new int[100001];
-         Arrays.fill(dp, -1);
+        Arrays.fill(dp, -1);
         return moon(arr, 0, n);
     }
 }
