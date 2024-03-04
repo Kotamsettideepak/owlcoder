@@ -37,17 +37,16 @@ class Solution {
     public boolean moon(ArrayList<ArrayList<Integer>> adj, int curr) {
         stack[curr] = true;
         visited[curr] = true;
+        boolean cycle=false;
         for (int i : adj.get(curr)) {
             if (stack[i]) {
                 return true;
             } else if (!visited[i]) {
-                if (moon(adj, i)) {
-                    return true;
-                }
+                cycle =cycle || moon(adj, i);
             }
         }
         stack[curr] = false;
-        return false;
+        return cycle;
     }
 
     public boolean isCyclic(int V, ArrayList<ArrayList<Integer>> adj) {
