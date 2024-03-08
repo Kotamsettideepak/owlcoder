@@ -38,12 +38,12 @@ class Solution {
         if (target == 0) {
             return 1;
         }
-        long take=0, ntake=0;
+        long c=0;
         if (arr[i] <= target) {
-            take= moon(arr, i, n, target - arr[i]);
+            c+= moon(arr, i, n, target - arr[i]);
         }
-        ntake= moon(arr, i + 1, n, target);
-        return dp[i][target] = ntake+take;
+        c+= moon(arr, i + 1, n, target);
+        return dp[i][target] = c;
     }
 
     public long count(int coins[], int N, int sum) {
