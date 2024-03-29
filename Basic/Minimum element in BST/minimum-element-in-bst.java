@@ -118,15 +118,11 @@ class Node {
 }
 */
 class Solution {
-    int min=Integer.MAX_VALUE;
-    void moon(Node root){
-        if(root==null)return;
-        if(root.data<min)min=root.data;
-        moon(root.left);
-        moon(root.right);
-    }
     int minValue(Node root) {
-        moon(root);
-        return min==Integer.MAX_VALUE ? -1 : min;
+        if(root==null)return -1;
+        while(root.left != null){
+            root=root.left;
+        }
+        return root.data;
     }
 }
