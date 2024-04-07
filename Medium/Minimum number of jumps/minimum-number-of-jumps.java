@@ -26,6 +26,8 @@ class GFG
 // } Driver Code Ends
 
 
+
+
 class Solution{
     static int minJumps(int[] nums){
         if(nums.length==1)return 0;
