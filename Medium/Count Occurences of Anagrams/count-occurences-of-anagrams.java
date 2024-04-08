@@ -44,8 +44,6 @@ class Solution {
         int l = txt.length();
         int j = 0;
         for (int i = n; i < l; i++) {
-            // System.out.println("Array " + Arrays.toString(arr));
-            // System.out.println(Arrays.toString(check));
             if (isValid(arr, check)) {
                 count++;
             }
